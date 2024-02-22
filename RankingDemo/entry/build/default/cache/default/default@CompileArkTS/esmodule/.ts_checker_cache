@@ -9,7 +9,7 @@
       "error": false
     },
     "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/pages/RankPage.ets": {
-      "mtimeMs": 1696850516000,
+      "mtimeMs": 1708586164926.2046,
       "children": [
         "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/viewmodel/RankViewModel.ets",
         "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/viewmodel/RankData.ets",
@@ -179,7 +179,7 @@
       "error": false
     },
     "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/view/TitleComponent.ets": {
-      "mtimeMs": 1695174438000,
+      "mtimeMs": 1708587304691.2122,
       "children": [
         "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/common/constants/Constants.ets"
       ],
@@ -189,7 +189,7 @@
       "error": false
     },
     "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/view/ListItemComponent.ets": {
-      "mtimeMs": 1695174438000,
+      "mtimeMs": 1708587370882.4812,
       "children": [
         "/Users/aige/Documents/Codes/HarmonyOS/Samples/Official/RankingDemo/entry/src/main/ets/common/constants/Constants.ets"
       ],

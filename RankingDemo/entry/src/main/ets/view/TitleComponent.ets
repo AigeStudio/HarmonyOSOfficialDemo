@@ -18,6 +18,7 @@ import { FontSize, TitleBarStyle, WEIGHT } from '../common/constants/Constants';
 
 @Component
 export struct TitleComponent {
+  // 使用 @Link 注解声明组件内的状态变量
   @Link isRefreshData: boolean; // User click the button to decide whether to switch data.
   @State title: Resource = $r('app.string.title_default');
 

@@ -14,17 +14,26 @@
  */
 
 import { FontSize, FontWeight, ItemStyle, WEIGHT } from '../common/constants/Constants';
-
+// 列表项组件
+// 装饰器是用于类、结构、方法和变量上表示特殊含义的字符串，一般以 @ 开头。
+// 下述代码中 @Component、@State 以及 @Prop 等都是装饰器。
+// @Component 装饰器用来表示 ListItemComponent 这个结构体是一个自定义的组件，可以与其它组件进行组合
+// struct 关键字表示 ListItemComponent 是一个数据结构。
+// export 关键字表示 ListItemComponent 是一个可在其它地方导出使用的数据结构，在需要使用 ListItemComponent 的地方使用 import 关键字导入
+// 该 ListItemComponent：import { ListItemComponent } from '../view/ListItemComponent';
 @Component
 export struct ListItemComponent {
   index?: number;
   private name?: Resource;
-  @Prop vote: string = '';
-  @Prop isSwitchDataSource: boolean = false;
+  @Prop vote: string;
+  @Prop isSwitchDataSource: boolean;
   // The state is related to the font color of ListItemComponent.
+  // 用 @State 装饰器装饰的变量值发生改变时会触发该变量所对应的组件 UI 自动刷新。
   @State isChange: boolean = false;
 
+  // build 函数以声明式的方式描述该组件的 UI 结构。
   build() {
+    // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
     Row() {
       Column() {
         if (this.isRenderCircleText()) {
@@ -64,7 +73,7 @@ export struct ListItemComponent {
 
   @Builder CircleText(index: number) {
     Row() {
-      Text(this.index?.toString())
+      Text(index.toString())
         .fontWeight(FontWeight.BOLD)
         .fontSize(FontSize.SMALL)
         .fontColor(Color.White);

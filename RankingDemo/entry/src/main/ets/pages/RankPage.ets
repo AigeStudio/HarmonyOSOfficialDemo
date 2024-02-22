@@ -23,6 +23,7 @@ import { APP_EXIT_INTERVAL, Style, TIME, TITLE, WEIGHT } from '../common/constan
 
 let rankModel: RankViewModel = new RankViewModel();
 
+// 由 @Entry 装饰器修饰的结构体表示应用的默认入口页面
 @Entry
 @Component
 struct RankPage {

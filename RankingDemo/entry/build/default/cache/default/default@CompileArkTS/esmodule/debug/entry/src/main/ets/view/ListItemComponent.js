@@ -30,18 +30,6 @@ export class ListItemComponent extends ViewPU {
         if (params.name !== undefined) {
             this.name = params.name;
         }
-        if (params.vote !== undefined) {
-            this.__vote.set(params.vote);
-        }
-        else {
-            this.__vote.set('');
-        }
-        if (params.isSwitchDataSource !== undefined) {
-            this.__isSwitchDataSource.set(params.isSwitchDataSource);
-        }
-        else {
-            this.__isSwitchDataSource.set(false);
-        }
         if (params.isChange !== undefined) {
             this.isChange = params.isChange;
         }
@@ -80,17 +68,23 @@ export class ListItemComponent extends ViewPU {
     set isChange(newValue) {
         this.__isChange.set(newValue);
     }
+    // build 函数以声明式的方式描述该组件的 UI 结构。
     initialRender() {
         this.observeComponentCreation((elmtId, isInitialRender) => {
             ViewStackProcessor.StartGetAccessRecordingFor(elmtId);
+            // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
             Row.create();
+            // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
             Row.height(ItemStyle.BAR_HEIGHT);
+            // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
             Row.width(WEIGHT);
+            // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
             Row.onClick(() => {
-                this.isSwitchDataSource = !this.isSwitchDataSource;
+                // this.isSwitchDataSource = !this.isSwitchDataSource;
                 this.isChange = !this.isChange;
             });
             if (!isInitialRender) {
+                // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
                 Row.pop();
             }
             ViewStackProcessor.StopGetAccessRecording();
@@ -181,6 +175,7 @@ export class ListItemComponent extends ViewPU {
             ViewStackProcessor.StopGetAccessRecording();
         });
         Text.pop();
+        // 下述代码中的 Row、Column、Text 等都是内置组件，由 SDK 自带提供。
         Row.pop();
     }
     CircleText(index, parent = null) {
@@ -198,9 +193,8 @@ export class ListItemComponent extends ViewPU {
             ViewStackProcessor.StopGetAccessRecording();
         });
         this.observeComponentCreation((elmtId, isInitialRender) => {
-            var _a;
             ViewStackProcessor.StartGetAccessRecordingFor(elmtId);
-            Text.create((_a = this.index) === null || _a === void 0 ? void 0 : _a.toString());
+            Text.create(index.toString());
             Text.fontWeight(FontWeight.BOLD);
             Text.fontSize(FontSize.SMALL);
             Text.fontColor(Color.White);
