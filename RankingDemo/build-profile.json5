@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/aige/.ohos/config/auto_debug_RankingDemo_com.example.rankdemo_890086000102013521.cer",
+          "storePassword": "0000001B2E7B4390B0F2CEF80FA5ED4D655BA3035301C900C065E1E6357C732199898A56863FEA430E9BB8",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B9F86C18B1080F495EA59E3482705A9A8C7AD8441DBF33A5A5C16AFE550505AEAFE8B39DD0D1194",
+          "profile": "/Users/aige/.ohos/config/auto_debug_RankingDemo_com.example.rankdemo_890086000102013521.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/aige/.ohos/config/auto_debug_RankingDemo_com.example.rankdemo_890086000102013521.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
