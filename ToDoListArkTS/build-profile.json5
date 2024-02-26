@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/aige/.ohos/config/auto_debug_ToDoListArkTS_com.huawei.todolist_890086000102013521.cer",
+          "storePassword": "0000001B375F288F663B9898B564B7669D39E29D5E180BD5CFB8A505413B182327C40A82E7BE58EDA790FB",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BF5DDDAF0F821B56B3D402A0CD5FD779DF92F9D8AD4FEA9CCB8B8489236926BFEB4FBB5B425E967",
+          "profile": "/Users/aige/.ohos/config/auto_debug_ToDoListArkTS_com.huawei.todolist_890086000102013521.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/aige/.ohos/config/auto_debug_ToDoListArkTS_com.huawei.todolist_890086000102013521.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
